@@ -1,0 +1,123 @@
+@media (max-width:576px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* styles.scss */
+@import "~font-awesome/css/font-awesome.css";
+
+
+.carousel-caption {
+    bottom: 30%;
+
+}
+
+.carousel-caption #search {
+    display: flex;
+}
+
+.carousel-caption #searchButton {
+    display: flex;
+}
+
+.carousel-caption #cap {
+    display: flex;
+
+}
+
+#middleContent {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+
+@media (max-width:576px) {
+
+    .carousel-caption {
+        bottom: 10%;
+
+    }
+
+    .carousel-inner .carousel-caption #cap {
+        font-size: 1rem;
+
+    }
+
+    .carousel-inner .carousel-caption #searchButton {
+        height: 0.5%;
+        width: 25%;
+
+
+    }
+
+    .carousel-inner .carousel-caption #search {
+        width: 50%;
+        height: 3%;
+    }
+}
+
+
+
+#middleContent {
+    margin-top: 80px;
+
+}
+
+.carousel-img-size img {
+    object-fit: cover;
+}
+
+#cap {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#search {
+    width: 70%;
+
+}
+
+@media (max-width: 576px) {
+    #search {
+        width: 100%;
+
+    }
+}
+
+#middleContent2 {
+    margin-top: 2%;
+    background-color: #000;
+
+    color: #fff;
+
+    padding: 50px 0;
+
+}
+
+@media (max-width: 576px) {
+    #middleContent2 {
+        padding: 30px 0;
+
+    }
+}

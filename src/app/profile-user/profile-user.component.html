@@ -1,0 +1,162 @@
+<!-- Navbar Starts -->
+<nav class="navbar navbar-expand-sm bg-dark">
+        <a href="" class="navbar-brand">
+            <h2 class="ms-3">Logo</h2>
+        </a>
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style="border: 2px solid white;">
+            <span class="navbar-toggler-icon white-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav me-3">
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a></li>
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About Us</a></li>
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Job</a></li>
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Clients</a></li>
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Employers</a></li>
+                <li class="nav-item"><a href="/" class="nav-link text-white" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+    
+    <!-- User Intro -->
+    
+    <section class="container mt-5">
+        <div class="row container mt-5">
+            <div class="col-md-6">
+                <img src="{{userProfileData[0].selectedFileBase64}}" alt="" class="img-fluid" />
+                <div class="mt-5">
+                    <button type="button" class="btn btn-secondary ms-4" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                        Edit  Picture
+                    </button>
+    
+                    <button type="button" class="btn btn-primary ms-4" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                        Edit Profile
+                    </button>
+    
+                    <!-- Registration Modal -->
+                    <div class="modal" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <h5 class="modal-title text-dark" id="registrationModalLabel">
+                                                    Update
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <div class="col-md-12">
+                                                    <form [formGroup]="registrationForm1" class="was-validated">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="profilePicture" class="form-label">
+                                                                        <img src="{{userProfileData[0].selectedFileBase64}}" alt="" class="img-fluid" />
+                                                                        <i class="fa fa-upload" style="width: 100px;" aria-hidden="true">Upload</i>
+                                                                    </label>
+                                                                    <input type="file" class="form-control" id="profilePicture" accept="image/*" formControlName="selectedFileBase64" (change)="onFileSelected($event)" required />
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="name" class="form-label text-dark">First Name</label>
+                                                                    <input type="text" class="form-control" pattern="[A-Za-z ]+" maxlength="20" id="name" name="name" formControlName="firstName" required />
+    
+                                                                    <div class="valid-feedback">
+                                                                        Valid.
+                                                                    </div>
+                                                                    <div class="invalid-feedback">
+                                                                        Please fill out this field.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="lname" class="form-label text-dark">Last Name</label>
+                                                                    <input type="text" class="form-control" pattern="[A-Za-z ]+" id="lname" formControlName="lname" required />
+    
+                                                                    <div class="valid-feedback text-dark">
+                                                                        Valid.
+                                                                    </div>
+                                                                    <div class="invalid-feedback text-dark">
+                                                                        Please fill out this field.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="email" class="form-label text-dark">Email</label>
+                                                                    <input type="email" class="form-control" placeholder="example@gmail.com" id="email" formControlName="email" required />
+                                                                    <div class="valid-feedback text-dark">
+                                                                        Valid.
+                                                                    </div>
+                                                                    <div class="invalid-feedback text-dark">
+                                                                        Please fill out this field.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="phone" class="form-label text-dark">Phone Number</label>
+                                                                    <input type="tel" class="form-control" id="phone" formControlName="phone" placeholder="Enter 10 Digit Mobile Number" required />
+                                                                    <div class="valid-feedback text-dark">
+                                                                        Valid.
+                                                                    </div>
+                                                                    <div class="invalid-feedback text-dark">
+                                                                        Please fill out this field.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="age" class="form-label text-dark">{{age}}</label>
+    
+                                                                    <input type="range" class="form-range" min="18" max="100" id="customRange2" (input)="updateRangeValue($event)" formControlName="age" />
+                                                                    <br />
+    
+                                                                    <div id="rangeValue" class="text-dark"></div>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="gender" class="form-label text-dark">Gender</label>
+                                                                    <select class="form-select" id="gender" formControlName="gender" required>
+                                                                        <option value="male">
+                                                                            Male
+                                                                        </option>
+                                                                        <option value="female">
+                                                                            Female
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="hobbies" class="form-label text-dark">Hobbies</label>
+                                                                    <input type="text" class="form-control" pattern="[A-Za-z ]+" placeholder="Sport,Singing" id="hobbies" formControlName="hobbies" required />
+                                                                    <div class="valid-feedback text-dark">
+                                                                        Valid.
+                                                                    </div>
+                                                                    <div class="invalid-feedback text-dark">
+                                                                        Please fill out this field.
+                                                                    </div>
+                                                                </div>
+    
+                                                                <button type="submit" class="btn btn-primary text-dark" data-bs-dismiss="modal" (click)="updateProfile()" aria-label="Close">Update</button>
+    
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- The Modal -->
+            </div>
+            <div class="col-md-6">
+                <p class="text-dark">
+                    I'm {{userProfileData[0].firstName}} and I'm above {{userProfileData[0].age}}. You can send your Email to {{userProfileData[0].email}}. I live in the state of {{userProfileData[0].state}}. I like to play
+                    {{userProfileData[0].hobbies}}. Please send me newsletters. Please reach out to me on my phone number.
+                </p>
+                <button class="btn btn-danger">I agree</button>
+            </div>
+        </div>
+    </section>
+    
