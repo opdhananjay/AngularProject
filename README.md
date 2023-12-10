@@ -26,6 +26,22 @@ Navigate to Root Directory
 
 Run cmd : ng serve
 
+-----------------------------------
+[
+
+if u get Error - 
+
+Node packages may not be installed. Try installing with 'npm install'.
+Error: Could not find the '@angular-devkit/build-angular:dev-server' builder's node package.
+
+
+Try this cmd : npm install --save-dev @angular-devkit/build-angular
+
+and again do : ng serve
+
+]
+--------------------------------------
+
 go to browser on: http://localhost:4200
 
 -------------------------------------------------------------------------------------------------------------
