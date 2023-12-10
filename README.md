@@ -27,7 +27,9 @@ go to browser on: http://localhost:4200
 
 
 
-3 Above Project is Made using Angular 16 Version , bootstrap 5, HTML,CSS and Typescript , Json Server For Storing User Information
+3 .Above Project is Made using Angular 16 Version , bootstrap 5, HTML,CSS and Typescript , Json Server For Storing User Information
+
+4 . Wthout Json Server Deploy on Netlify You can able see FrontEnd - https://tubular-travesseiro-059981.netlify.app/
 
 
 
