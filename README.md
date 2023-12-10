@@ -1,7 +1,10 @@
 # AngularProject
+-----------------------------------------------------------------------------------------------------------
 
 
 How to Run Above Project - 
+
+------------------------------------------------------------------------------------------------------------
 
 1 . For Running Json Server 
 
@@ -13,7 +16,7 @@ To start the Json server run the command in the cmd : json-server --watch JsonSe
 
 After starting the server you can go to http://localhost:3000 port where the server is in the running stage
 
-
+-------------------------------------------------------------------------------------------------------------
 
 2 . Run Angular App -
 
@@ -25,9 +28,11 @@ Run cmd : ng serve
 
 go to browser on: http://localhost:4200
 
-
+-------------------------------------------------------------------------------------------------------------
 
 3 .Above Project is Made using Angular 16 Version , bootstrap 5, HTML,CSS and Typescript , Json Server For Storing User Information
+
+--------------------------------------------------------------------------------------------------------------
 
 4 . Wthout Json Server Deploy on Netlify You can able see FrontEnd - https://tubular-travesseiro-059981.netlify.app/
 
